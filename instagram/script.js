@@ -15,7 +15,7 @@ backButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="30" heigh
 
 // Adicionando um evento de clique para redirecionar quando o botÃ£o de volta for clicado
 backButton.addEventListener("click", function() {
-window.location.href = `${var_insta_url}`; // Substitua pelo URL desejado
+window.location.href = `${typebot_insta_url}`; // Substitua pelo URL desejado
 });
 
 var avatar = document.createElement("div");
@@ -46,7 +46,7 @@ phoneAction.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" heig
 </svg>`;
 // Adicionando um evento de clique para redirecionar quando o botÃ£o de volta for clicado
 phoneAction.addEventListener("click", function() {
-window.location.href = `${var_insta_url}`; // Substitua pelo URL desejado
+window.location.href = `${typebot_insta_url}`; // Substitua pelo URL desejado
 });
 
 userBar.appendChild(backButton);
@@ -72,17 +72,17 @@ if (elementoPai) {
   <div class="user-metadata">
       <div class="avatar">
           <div>
-              <img src="${var_avatar}" alt="avatar">
+              <img src="${typebot_avatar}" alt="avatar">
           </div>
           <div class="primary-info">
-              <p class="name">${var_nome}</p>
-              <p>Instagram â€¢ ${var_insta_nome}</p>
+              <p class="name">${typebot_nome}</p>
+              <p>Instagram â€¢ ${typebot_insta_nome}</p>
           </div>
           <div class="secondary-info">
-              <p>${var_seguidores} seguidores â€¢ ${var_publi} publicaÃ§Ãµes</p>
+              <p>${typebot_seguidores} seguidores â€¢ ${typebot_publi} publicaÃ§Ãµes</p>
               <p>Segue vocÃª</p>
           </div>
-          <a href="${var_insta_url}" target="_blank">ver perfil</a>
+          <a href="${typebot_insta_url}" target="_blank">ver perfil</a>
 
       </div>
   </div>
