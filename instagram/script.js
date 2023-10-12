@@ -1,4 +1,4 @@
-function criarBarra(typebot_nome = 'Seu Nome', typebot_avatar = '', typebot_insta_nome = 'seunome', typebot_insta_url = 'https://instagram.com', typebot_seguidores = '1,2 mil', typebot_publi = '132') {
+function criarBarra(var_nome = 'Seu Nome', var_avatar = '', var_insta_nome = 'seunome', var_insta_url = 'https://instagram.com', var_seguidores = '1,2 mil', var_publi = '132') {
 
 var varStatus = document.createElement("span");
 var elementoPai = document.getElementsByTagName("typebot-standard")[0].shadowRoot.querySelector('.typebot-container');
@@ -15,16 +15,16 @@ backButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="30" heigh
 
 // Adicionando um evento de clique para redirecionar quando o botÃ£o de volta for clicado
 backButton.addEventListener("click", function() {
-window.location.href = `${typebot_insta_url}`; // Substitua pelo URL desejado
+window.location.href = `${var_insta_url}`; // Substitua pelo URL desejado
 });
 
 var avatar = document.createElement("div");
 avatar.className = "avatar";
-avatar.innerHTML = '<img src="'+typebot_avatar+'">';
+avatar.innerHTML = '<img src="'+var_avatar+'">';
 
 var name = document.createElement("div");
 name.className = "name";
-name.innerHTML = '<span>'+typebot_nome+'</span>&nbsp<span style="float: right" data-testid="psa-verified" data-icon="psa-verified" class=""><svg viewBox="0 0 18 18" height="18" width="18" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 18 18" xml:space="preserve"><polygon id="Star-2" fill="#0099FD" points="9,16 7.1,16.9 5.8,15.2 3.7,15.1 3.4,13 1.5,12 2.2,9.9 1.1,8.2 2.6,6.7 2.4,4.6 4.5,4 5.3,2 7.4,2.4 9,1.1 10.7,2.4 12.7,2 13.6,4 15.6,4.6 15.5,6.7 17,8.2 15.9,9.9 16.5,12 14.7,13 14.3,15.1 12.2,15.2 10.9,16.9 "></polygon><polygon id="Check-Icon" fill="#FFFFFF" points="13.1,7.3 12.2,6.5 8.1,10.6 5.9,8.5 5,9.4 8,12.4 "></polygon></svg></span><span class="status"></span>';
+name.innerHTML = '<span>'+var_nome+'</span>&nbsp<span style="float: right" data-testid="psa-verified" data-icon="psa-verified" class=""><svg viewBox="0 0 18 18" height="18" width="18" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 18 18" xml:space="preserve"><polygon id="Star-2" fill="#0099FD" points="9,16 7.1,16.9 5.8,15.2 3.7,15.1 3.4,13 1.5,12 2.2,9.9 1.1,8.2 2.6,6.7 2.4,4.6 4.5,4 5.3,2 7.4,2.4 9,1.1 10.7,2.4 12.7,2 13.6,4 15.6,4.6 15.5,6.7 17,8.2 15.9,9.9 16.5,12 14.7,13 14.3,15.1 12.2,15.2 10.9,16.9 "></polygon><polygon id="Check-Icon" fill="#FFFFFF" points="13.1,7.3 12.2,6.5 8.1,10.6 5.9,8.5 5,9.4 8,12.4 "></polygon></svg></span><span class="status"></span>';
 
 varStatus.className = "status";
 name.appendChild(varStatus)
@@ -46,7 +46,7 @@ phoneAction.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" heig
 </svg>`;
 // Adicionando um evento de clique para redirecionar quando o botÃ£o de volta for clicado
 phoneAction.addEventListener("click", function() {
-window.location.href = `${typebot_insta_url}`; // Substitua pelo URL desejado
+window.location.href = `${var_insta_url}`; // Substitua pelo URL desejado
 });
 
 userBar.appendChild(backButton);
@@ -72,17 +72,17 @@ if (elementoPai) {
   <div class="user-metadata">
       <div class="avatar">
           <div>
-              <img src="${typebot_avatar}" alt="avatar">
+              <img src="${var_avatar}" alt="avatar">
           </div>
           <div class="primary-info">
-              <p class="name">${typebot_nome}</p>
-              <p>Instagram â€¢ ${typebot_insta_nome}</p>
+              <p class="name">${var_nome}</p>
+              <p>Instagram â€¢ ${var_insta_nome}</p>
           </div>
           <div class="secondary-info">
-              <p>${typebot_seguidores} seguidores â€¢ ${typebot_publi} publicaÃ§Ãµes</p>
+              <p>${var_seguidores} seguidores â€¢ ${var_publi} publicaÃ§Ãµes</p>
               <p>Segue vocÃª</p>
           </div>
-          <a href="${typebot_insta_url}" target="_blank">ver perfil</a>
+          <a href="${var_insta_url}" target="_blank">ver perfil</a>
 
       </div>
   </div>
